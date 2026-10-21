@@ -11,59 +11,16 @@
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans)}body.lock{overflow:hidden}a{color:inherit;text-decoration:none}button{font:inherit}.top{display:flex;justify-content:space-between;align-items:center;padding:20px clamp(20px,4vw,58px);border-bottom:1px solid var(--line)}.mark{font-size:28px;font-weight:600;letter-spacing:-.12em}.nav{display:flex;gap:20px;font:10px var(--mono);letter-spacing:.07em;text-transform:uppercase}.nav a{border-bottom:1px solid;padding:0 0 4px}.nav a:hover,.back:hover{color:var(--blue)}.back,.eyebrow,.meta,.tag,.caption,.counter{font:10px/1.5 var(--mono);letter-spacing:.08em;text-transform:uppercase}.back{border-bottom:1px solid;padding-bottom:4px}main{max-width:1500px;margin:auto}.intro{padding:clamp(65px,9vw,125px) clamp(20px,7vw,105px) 55px}.eyebrow{margin:0 0 20px;color:var(--blue)}h1{margin:0;font:700 clamp(62px,13vw,180px)/.76 var(--sans);letter-spacing:-.12em;text-transform:uppercase}.intro-row{display:grid;grid-template-columns:1fr minmax(220px,.43fr);gap:30px;align-items:end;margin-top:clamp(38px,6vw,75px)}.intro-row p{margin:0;max-width:720px;font:400 clamp(19px,2.1vw,29px)/1.25 var(--type)}.intro-row .meta{text-align:right;justify-self:end;max-width:270px;color:#555}.section{padding:10px clamp(20px,7vw,105px) clamp(75px,10vw,140px);scroll-margin-top:18px}.section-head{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;border-top:2px solid var(--ink);padding-top:13px;margin-bottom:clamp(28px,5vw,60px)}.section-head h2{margin:0;font:600 clamp(42px,7vw,94px)/.82 var(--sans);letter-spacing:-.1em;text-transform:uppercase}.section-head p{max-width:230px;margin:0;text-align:right}.feature{display:grid;grid-template-columns:minmax(240px,.75fr) minmax(320px,1fr);gap:clamp(25px,6vw,80px);align-items:center}.feature-copy{padding:15px 0}.feature-copy .counter{color:var(--blue)}.feature-copy h3{margin:24px 0 15px;font:600 clamp(40px,6vw,82px)/.82 var(--sans);letter-spacing:-.1em;text-transform:uppercase}.feature-copy .dek{max-width:490px;margin:0;font:17px/1.45 var(--type)}.details{display:inline-flex;align-items:center;gap:10px;margin-top:28px;padding:12px 15px;border:1px solid var(--ink);background:transparent;cursor:pointer;font:10px var(--mono);letter-spacing:.08em;text-transform:uppercase;transition:background .2s,color .2s}.details:hover{background:var(--ink);color:var(--cream)}.carousel{position:relative}.frame{position:relative;width:100%;aspect-ratio:3/4;background:#d1c8b8;overflow:hidden}.frame img{display:block;width:100%;height:100%;object-fit:contain;background:var(--cream)}.frame img.contain{object-fit:contain;background:#18242a}.open-image{position:absolute;inset:0;width:100%;height:100%;border:0;background:transparent;cursor:pointer}.arrow{position:absolute;z-index:2;top:50%;transform:translateY(-50%);width:46px;height:46px;border:0;border-radius:50%;background:var(--cream);color:var(--ink);font-size:22px;cursor:pointer;box-shadow:0 2px 12px #0003;transition:transform .2s,background .2s}.arrow:hover{transform:translateY(-50%) scale(1.08);background:white}.arrow.prev{left:14px}.arrow.next{right:14px}.frame-label{position:absolute;z-index:2;left:16px;right:16px;bottom:15px;display:flex;justify-content:space-between;gap:10px;color:white;text-shadow:0 1px 5px #000;font:10px var(--mono);letter-spacing:.07em;text-transform:uppercase;pointer-events:none}.count-line{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-top:12px;color:#45443f}.count-line span{font:10px var(--mono);letter-spacing:.07em;text-transform:uppercase}.reel-shell{display:grid;grid-template-columns:1fr minmax(280px,.74fr);gap:clamp(25px,6vw,80px);align-items:center;padding:clamp(22px,4vw,52px);background:var(--ink);color:var(--cream)}.reel-shell .eyebrow{color:#80c6d4}.reel-shell .feature-copy h3{font-size:clamp(39px,5.7vw,76px)}.reel-shell .dek{max-width:450px;color:#eee7da}.reel-shell .details{border-color:var(--cream);color:var(--cream)}.reel-shell .details:hover{background:var(--cream);color:var(--ink)}.reel-shell .frame{background:#111}.reel-shell .arrow{background:var(--cream)}.reel-link{display:inline-block;margin:17px 0 0 12px;border-bottom:1px solid #eee7da;padding-bottom:4px;font:10px var(--mono);letter-spacing:.07em;text-transform:uppercase}.reel-link:hover{color:#80c6d4}.foot{display:flex;justify-content:space-between;gap:20px;padding:20px clamp(20px,4vw,58px);background:var(--ink);color:var(--cream)}dialog{width:min(1000px,calc(100% - 28px));max-height:90vh;padding:0;border:0;background:var(--paper);color:var(--ink);box-shadow:0 25px 80px #0006}dialog::backdrop{background:#121411c9;backdrop-filter:blur(5px)}.modal-head{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;border-bottom:1px solid var(--line)}.modal-head p{margin:0;font:10px var(--mono);letter-spacing:.08em;text-transform:uppercase}.modal-close{width:38px;height:38px;border:1px solid var(--ink);border-radius:50%;background:transparent;cursor:pointer;font-size:19px}.modal-body{display:grid;grid-template-columns:minmax(260px,.85fr) 1fr;gap:clamp(22px,4vw,55px);padding:clamp(20px,4vw,48px);overflow:auto;max-height:calc(90vh - 70px)}.modal-gallery{display:grid;grid-template-columns:1fr 1fr;gap:9px;align-content:start}.modal-gallery figure{margin:0;aspect-ratio:3/4;background:#cfc7b9;overflow:hidden}.modal-gallery img{width:100%;height:100%;object-fit:contain;background:var(--cream)}.modal-copy h2{margin:10px 0 16px;font:600 clamp(35px,5vw,62px)/.85 var(--sans);letter-spacing:-.09em;text-transform:uppercase}.modal-copy p{font:15px/1.5 var(--type)}.modal-copy .eyebrow{margin-top:22px}.modal-copy a{display:inline-block;margin-top:12px;border-bottom:1px solid;padding-bottom:5px;font:10px var(--mono);letter-spacing:.07em;text-transform:uppercase}.modal-copy a:hover{color:var(--blue)}
 @media(max-width:760px){.top{align-items:flex-start}.back{display:none}.nav{gap:12px;font-size:9px}.intro{padding-top:70px}.intro-row{grid-template-columns:1fr;gap:16px}.intro-row .meta{text-align:left;justify-self:start}.section-head h2{font-size:12vw}.section-head p{font-size:9px}.feature,.reel-shell{grid-template-columns:1fr;gap:26px}.feature-copy{order:1}.feature .carousel{order:2}.reel-shell .carousel{order:1}.reel-shell .feature-copy{order:2}.feature-copy h3{margin-top:15px}.modal-body{grid-template-columns:1fr}.modal-gallery{grid-template-columns:1fr 1fr}.foot{font-size:8px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
-
-/* Instagram portfolio */
-.social-section{padding-top:0}
-.social-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(18px,3vw,36px)}
-.social-card{min-width:0;padding:clamp(14px,2vw,24px);background:var(--cream);border:1px solid var(--line)}
-.social-card.creative{background:var(--blue);color:#fff;border-color:var(--blue)}
-.social-card-head{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:14px}
-.social-card-head h3{margin:0;font:600 clamp(23px,3vw,36px)/.9 var(--sans);letter-spacing:-.07em;text-transform:uppercase}
-.social-card-head span{font:10px var(--mono);letter-spacing:.08em;text-transform:uppercase}
-.social-embed{display:flex;justify-content:center;min-height:160px;overflow:hidden}
-.social-embed blockquote.instagram-media{margin:0 auto!important;min-width:0!important;width:100%!important;max-width:540px!important}
-.social-card .social-link{display:inline-block;margin-top:14px;border-bottom:1px solid currentColor;padding-bottom:4px;font:10px var(--mono);letter-spacing:.08em;text-transform:uppercase}
-.social-card .social-link:hover{opacity:.72}
-.social-section .section-head{margin-bottom:28px}
-@media(max-width:760px){.social-grid{grid-template-columns:1fr}.social-card.creative{grid-column:auto}}
-
 </style>
 </head>
 <body>
-<header class="top"><a class="mark" href="index.html">Derqui</a><nav class="nav" aria-label="Apartados"><a href="#reels">Reels</a><a href="#instagram">Instagram</a></nav><a class="back" href="index.html#projects">← Portfolio</a></header>
+<header class="top"><a class="mark" href="index.html">Derqui</a><nav class="nav" aria-label="Apartados"><a href="#reels">Reels</a></nav><a class="back" href="index.html#projects">← Portfolio</a></header>
 <main>
 <section class="intro"><p class="eyebrow">02 / AutoVidal · Reels</p><h1>Auto<span style="color:var(--blue)">vi</span>dal</h1><div class="intro-row"><p>Una serie de conversaciones breves sobre las personas y los modelos de AutoVidal.</p><p class="meta">Selección de trabajo<br>Palma de Mallorca</p></div></section>
 
 <section class="section" id="reels"><div class="section-head"><h2>Reels</h2><p class="eyebrow">OIJ Talks · Una serie vertical alrededor de personas y modelos.</p></div>
 <div class="reel-shell"><div class="carousel"><div class="frame"><img class="contain" id="reelImage" src="assets/autovidal/oij-talks-ep1.png" alt="OIJ Talks, episodio 1 con Carlos Garau"><button class="open-image" id="reelOpen" aria-label="Abrir detalles del reel"></button><span class="frame-label"><span>OIJ Talks</span><span id="reelEpisode">EP. 1</span></span></div><button class="arrow prev" id="reelPrev" aria-label="Reel anterior">‹</button><button class="arrow next" id="reelNext" aria-label="Reel siguiente">›</button><div class="count-line"><span id="reelCaption">Carlos Garau · Jaecoo 7</span><span>1080 × 1440</span></div></div><div class="feature-copy"><span class="eyebrow" id="reelGuest">OIJ TALKS / EPISODIO 01</span><h3 id="reelTitle">Conversaciones<br>con motor.</h3><p class="dek" id="reelDek">Una serie de entrevistas breves que presenta a las personas detrás de la marca junto al modelo del que hablan.</p><button class="details" id="reelDetails">Ver proyecto ↗</button><a class="reel-link" id="watchReel" href="https://drive.google.com/file/d/1NJ2mhG22BtIKx252iGPD9-YQQzQEew8O/preview" target="_blank" rel="noopener">Ver reel ↗</a></div></div>
 </section>
-
-<section class="section social-section" id="instagram">
-  <div class="section-head"><h2>Instagram</h2><p class="eyebrow">Piezas recientes · Reels y carrusel</p></div>
-  <div class="social-grid">
-    <article class="social-card">
-      <div class="social-card-head"><h3>Reel 01</h3><span>AutoVidal / Reel</span></div>
-      <div class="social-embed"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Ddlkv_GM7BU/" data-instgrm-version="14"></blockquote></div>
-      <a class="social-link" href="https://www.instagram.com/p/Ddlkv_GM7BU/" target="_blank" rel="noopener">Ver en Instagram ↗</a>
-    </article>
-    <article class="social-card">
-      <div class="social-card-head"><h3>Reel 02</h3><span>AutoVidal / Reel</span></div>
-      <div class="social-embed"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DdYb52JukG3/" data-instgrm-version="14"></blockquote></div>
-      <a class="social-link" href="https://www.instagram.com/p/DdYb52JukG3/" target="_blank" rel="noopener">Ver en Instagram ↗</a>
-    </article>
-    <article class="social-card">
-      <div class="social-card-head"><h3>Reel 03</h3><span>AutoVidal / Reel</span></div>
-      <div class="social-embed"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DaXg4J7OuMM/" data-instgrm-version="14"></blockquote></div>
-      <a class="social-link" href="https://www.instagram.com/p/DaXg4J7OuMM/" target="_blank" rel="noopener">Ver en Instagram ↗</a>
-    </article>
-    <article class="social-card creative">
-      <div class="social-card-head"><h3>Carrusel creativo</h3><span>AutoVidal / Carrusel</span></div>
-      <div class="social-embed"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DcvZZ8hDDuD/?img_index=1" data-instgrm-version="14"></blockquote></div>
-      <a class="social-link" href="https://www.instagram.com/p/DcvZZ8hDDuD/?img_index=1" target="_blank" rel="noopener">Ver carrusel en Instagram ↗</a>
-    </article>
-  </div>
-</section>
-
 </main>
 <footer class="foot"><span>DERQUI / AutoVidal</span><a href="index.html#projects">Volver al portfolio ↗</a></footer>
 <dialog id="detailDialog" aria-labelledby="modalTitle"><div class="modal-head"><p id="modalEyebrow">Reel / OIJ Talks</p><button class="modal-close" id="modalClose" aria-label="Cerrar">×</button></div><div class="modal-body"><div class="modal-gallery" id="modalGallery"></div><div class="modal-copy"><p class="eyebrow" id="modalType"></p><h2 id="modalTitle"></h2><p id="modalGoal"></p><p class="eyebrow">Planteamiento</p><p id="modalPlan"></p><p class="eyebrow">Piezas</p><p id="modalPieces"></p><a id="modalLink" href="#" target="_blank" rel="noopener">Ver material ↗</a></div></div></dialog>
@@ -95,6 +52,4 @@ $("reelDetails").addEventListener("click",showReel);$("reelOpen").addEventListen
 $("modalClose").addEventListener("click",()=>dialog.close());dialog.addEventListener("click",e=>{if(e.target===dialog)dialog.close()});dialog.addEventListener("close",()=>document.body.classList.remove("lock"));
 drawReel();
 </script>
-<script async src="https://www.instagram.com/embed.js"></script>
-<script>window.addEventListener("load",()=>{if(window.instgrm&&window.instgrm.Embeds)window.instgrm.Embeds.process()});</script>
 </body></html>
