@@ -13,6 +13,43 @@ main{max-width:1440px;margin:auto;padding:0 5vw}.hero{min-height:calc(100svh - 8
 .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(30px,5vw,80px) 18px;padding:clamp(58px,8vw,110px) 0}.card{min-width:0}.card:nth-child(3n+1){margin-top:clamp(0px,7vw,95px)}.visual{position:relative;aspect-ratio:1398/1080;overflow:hidden;background:#191917;border:1px solid #000}.visual iframe{position:absolute;inset:0;border:0;width:100%;height:100%;background:#191917}.copy{padding:13px 0 0;display:grid;grid-template-columns:1fr auto;gap:14px;align-items:end}.kicker{color:var(--green);grid-column:1/-1}.copy h2{font:500 clamp(24px,3vw,38px)/1.05 var(--serif);letter-spacing:-.045em;margin:0}.copy p{grid-column:1;margin:6px 0 0;color:#595750;font-size:12px;line-height:1.65;max-width:390px}.source{grid-column:2;grid-row:2/4;align-self:center;color:var(--muted);font:9px var(--mono);letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
 footer{padding:18px 5vw;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;color:var(--muted);font:9px var(--mono);letter-spacing:.07em;text-transform:uppercase}footer a{color:var(--ink)}
 @media(max-width:760px){header{height:68px;padding:0 18px}.brand{font-size:25px}.nav{gap:14px;font-size:8px}main{padding:0 18px}.hero{min-height:auto;grid-template-columns:1fr;padding:70px 0 48px;gap:35px}.intro{margin:0;max-width:490px}.grid{grid-template-columns:1fr;gap:48px;padding:46px 0 65px}.card:nth-child(3n+1){margin-top:0}.copy h2{font-size:31px}footer{padding:18px;flex-direction:column}}
+
+.reels-section{padding:clamp(58px,8vw,110px) 0;border-top:1px solid var(--line)}
+.reels-heading{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:28px}
+.reels-heading h2{font:500 clamp(42px,7vw,86px)/.88 var(--serif);letter-spacing:-.065em;margin:10px 0 0}
+.reels-heading h2 em{color:var(--green);font-weight:500}
+.reels-summary{font:10px/1.7 var(--mono);letter-spacing:.07em;text-transform:uppercase;color:var(--muted);text-align:right}
+.reel-filters{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 27px}
+.reel-filter{appearance:none;border:1px solid var(--line);border-radius:99px;padding:10px 14px;background:transparent;color:var(--ink);font:9px var(--mono);letter-spacing:.07em;text-transform:uppercase;cursor:pointer;transition:background .22s,color .22s,border-color .22s,transform .22s}
+.reel-filter:hover{transform:translateY(-2px);border-color:var(--green)}
+.reel-filter[aria-pressed="true"]{background:var(--green);border-color:var(--green);color:#fff}
+.reels-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,190px),1fr));gap:14px}
+.reel-card{display:block;position:relative;min-width:0;padding:0;border:0;background:#171816;overflow:hidden;aspect-ratio:9/16;text-align:left;cursor:pointer;isolation:isolate;animation:reel-in .5s both;animation-delay:calc(var(--i,0)*24ms)}
+.reel-card::after{content:"";position:absolute;inset:30% 0 0;background:linear-gradient(180deg,transparent,rgba(10,11,10,.82));z-index:1;transition:opacity .3s}
+.reel-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.88;transition:transform .55s cubic-bezier(.2,.7,.2,1),opacity .35s}
+.reel-card:hover img,.reel-card:focus-visible img{transform:scale(1.045);opacity:1}
+.reel-card:focus-visible{outline:2px solid var(--green);outline-offset:4px}
+.reel-card__play{position:absolute;z-index:2;left:14px;top:14px;width:38px;height:38px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.7);border-radius:50%;color:#fff;background:rgba(15,16,15,.22);backdrop-filter:blur(8px);font-size:13px;transition:background .25s,transform .25s}
+.reel-card:hover .reel-card__play{background:var(--green);transform:scale(1.08)}
+.reel-card__meta{position:absolute;z-index:2;left:14px;right:12px;bottom:14px;color:#fff}
+.reel-card__group{display:block;margin-bottom:6px;font:9px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.75)}
+.reel-card__title{display:block;font:500 clamp(17px,1.55vw,22px)/1.08 var(--serif);letter-spacing:-.025em}
+.reel-card__index{position:absolute;z-index:2;right:13px;top:17px;color:rgba(255,255,255,.8);font:9px var(--mono);letter-spacing:.07em}
+.reel-dialog{position:fixed;inset:0;width:min(100vw,100%);height:min(100svh,100%);max-width:none;max-height:none;margin:auto;padding:clamp(12px,3vw,40px);border:0;background:rgba(15,16,15,.96);color:#fff;overflow:auto}
+.reel-dialog::backdrop{background:rgba(12,13,12,.82);backdrop-filter:blur(8px)}
+.reel-dialog__top{position:sticky;top:0;z-index:4;display:flex;align-items:center;justify-content:space-between;gap:20px;width:min(100%,1100px);margin:0 auto 18px}
+.reel-dialog__label{font:10px var(--mono);letter-spacing:.09em;text-transform:uppercase;color:rgba(255,255,255,.7)}
+.reel-dialog__title{font:500 clamp(20px,3vw,30px)/1.1 var(--serif);margin:5px 0 0}
+.reel-dialog__close,.reel-dialog__nav{display:grid;place-items:center;border:1px solid rgba(255,255,255,.45);border-radius:50%;width:42px;height:42px;background:transparent;color:#fff;cursor:pointer;font-size:20px;transition:background .2s,border-color .2s}
+.reel-dialog__close:hover,.reel-dialog__nav:hover{background:var(--green);border-color:var(--green)}
+.reel-dialog__body{display:grid;grid-template-columns:48px minmax(0,1fr) 48px;gap:16px;align-items:center;justify-content:center;max-width:1100px;margin:auto}
+.reel-dialog__stage{width:min(100%,min(62vh,760px));height:min(76svh,900px);margin:auto;background:#090a09;display:grid;place-items:center}
+.reel-dialog__stage iframe{display:block;width:100%;height:100%;border:0;background:#090a09}
+.reel-dialog__nav{justify-self:center;font-size:22px}
+@keyframes reel-in{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:760px){.reels-heading{align-items:start;flex-direction:column}.reels-summary{text-align:left}.reels-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.reel-card__play{width:34px;height:34px}.reel-card__meta{left:11px;right:10px;bottom:11px}.reel-card__title{font-size:18px}.reel-dialog{padding:10px}.reel-dialog__top{margin-bottom:10px}.reel-dialog__body{grid-template-columns:34px minmax(0,1fr) 34px;gap:6px}.reel-dialog__nav{width:32px;height:32px;font-size:18px}.reel-dialog__stage{width:min(100%,calc(100vw - 92px));height:min(76svh,680px)}}
+@media(prefers-reduced-motion:reduce){.reel-card,.reel-card img,.reel-card__play,.reel-filter{animation:none!important;transition:none!important}.reel-card{opacity:1;transform:none}}
+
 </style>
 </head>
 <body>
@@ -27,6 +64,45 @@ footer{padding:18px 5vw;border-top:1px solid var(--line);display:flex;justify-co
 <article class="card"><div class="visual"><iframe src="https://drive.google.com/file/d/1vGzKI-zKM4sQr_l2lDGBBkWs2a5VaYcs/preview" title="Edobbrand — Reel cinemático" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe></div><div class="copy"><p class="kicker">05 / Dirección visual</p><h2>Reel cinemático</h2><p>Color, atmósfera y montaje breve para construir una imagen de marca más editorial.</p><a class="source" href="https://drive.google.com/file/d/1vGzKI-zKM4sQr_l2lDGBBkWs2a5VaYcs/view?usp=drivesdk" target="_blank" rel="noopener">Abrir ↗</a></div></article>
 <article class="card"><div class="visual"><iframe src="https://drive.google.com/file/d/1AmwFwKyxZLHGCgZyeSx_mgkJny7KRaA0/preview" title="Fitness — Entrenamiento en exterior" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe></div><div class="copy"><p class="kicker">06 / Social fitness</p><h2>Entrenamiento en exterior</h2><p>Una pieza corta, pensada para formato vertical y consumo rápido en redes.</p><a class="source" href="https://drive.google.com/file/d/1AmwFwKyxZLHGCgZyeSx_mgkJny7KRaA0/view?usp=drivesdk" target="_blank" rel="noopener">Abrir ↗</a></div></article>
 </section>
+
+<section class="reels-section" aria-labelledby="reels-title">
+  <div class="reels-heading"><div><p class="eyebrow">02 / Video Editing · Formato vertical</p><h2 id="reels-title">Reels en <em>movimiento.</em></h2></div><p class="reels-summary"><span id="reel-count">42</span> piezas<br>Selecciona un grupo para explorar</p></div>
+  <div class="reel-filters" role="group" aria-label="Filtrar reels">
+    <button class="reel-filter" type="button" data-filter="Todos" aria-pressed="true">Todos</button>
+    <button class="reel-filter" type="button" data-filter="Herrero" aria-pressed="false">Herrero</button>
+    <button class="reel-filter" type="button" data-filter="Salva" aria-pressed="false">Salva</button>
+    <button class="reel-filter" type="button" data-filter="Masvida" aria-pressed="false">Masvida</button>
+    <button class="reel-filter" type="button" data-filter="Autovidal" aria-pressed="false">Autovidal</button>
+  </div>
+  <div class="reels-grid" id="reels-grid" aria-live="polite"></div>
+</section>
+<dialog class="reel-dialog" id="reel-dialog" aria-label="Reproductor de reels">
+  <div class="reel-dialog__top"><div><span class="reel-dialog__label" id="reel-dialog-label"></span><h3 class="reel-dialog__title" id="reel-dialog-title"></h3></div><button class="reel-dialog__close" type="button" id="reel-close" aria-label="Cerrar reproductor">×</button></div>
+  <div class="reel-dialog__body"><button class="reel-dialog__nav" type="button" id="reel-prev" aria-label="Reel anterior">‹</button><div class="reel-dialog__stage" id="reel-stage"></div><button class="reel-dialog__nav" type="button" id="reel-next" aria-label="Siguiente reel">›</button></div>
+</dialog>
+
 </main>
 <footer><span>DERQUI © 2026</span><a href="index.html#projects">Volver al inicio ↗</a></footer>
+
+<script>
+(()=>{
+  const reels=[{"group":"Herrero","id":"12z8dPWapAKwiBAE0S-CcCPAO6xMOY8w5","title":"Intro FitGeneration"},{"group":"Salva","id":"1upjgaH10Oj20BlOiCXIdiJzvYFiNfMvW","title":"Erborian"},{"group":"Salva","id":"1vN0x7K4XmCkTbsStRSw8gpJyBfNZNspJ","title":"Detox"},{"group":"Salva","id":"1OaCIGy5y7-EYNPgyW5QpC51F3lKXmWsz","title":"Reel de farmacia"},{"group":"Salva","id":"1K66DYrEWAJ83fmbfUzMEymROEARB-oG8","title":"Piel después del verano"},{"group":"Salva","id":"1lBp7lpN91eYPFpwi0o2DFL2HJv0ykcfF","title":"Cansancio"},{"group":"Salva","id":"1c0LQC_udU-B4aT1mqzvF5UjcuOL0p4Bc","title":"Caída del cabello"},{"group":"Salva","id":"1hvTiVkhsZpkFl4MuQlRkTJ_ep_LT4L9G","title":"Vuelta a la rutina"},{"group":"Salva","id":"1ebQDciRwp12BzlwNdf3N0xqzJSuxAVhE","title":"Aquilea · acción"},{"group":"Salva","id":"19hPN1UmNKewNT3T9gaEsp6OkACdVEsPG","title":"Physiorelax"},{"group":"Salva","id":"1uGWps_xyP2m3vYxzNBiKMlxF14Iv1rEJ","title":"Kobho GLP"},{"group":"Salva","id":"1Ct6-7GBaOciI7F0yBU2C0bRFtk2NXWKZ","title":"Onlift · Booster"},{"group":"Salva","id":"1JI03wUHxwMiuFnhM3oG3-STscDNJ38jh","title":"Neceser Primaderm"},{"group":"Salva","id":"1o36HWJvAvPrSgi5Eevpb28LMLqha_n6l","title":"Onlift · Neuro"},{"group":"Salva","id":"1QvOaanWWWbS3l3of3SoWZktfWpXiLpfY","title":"Nepher · Imperium Luz"},{"group":"Salva","id":"1L3QfvTngsGE9gyJ6Z0d-kGhHko8FbZpU","title":"Nepher · Láser Montse"},{"group":"Salva","id":"1SZxaBEwCwh1tW5yU6qi6xT-k-wT4vSgi","title":"Nepher · Láser"},{"group":"Salva","id":"1HcrNzOXjGYUgCOLZ1avQx0g4BACuA1Ro","title":"Solares Primaderm"},{"group":"Salva","id":"1WPpgEIc4IOVX-ctsW_pH1wAnPTO89RKj","title":"Nepher · intro"},{"group":"Salva","id":"1pO7qnVobMYy-MeiH14kY9V1iNNLrr0nl","title":"Ernai · gym TRT 2026"},{"group":"Masvida","id":"1lTjG6JZ6_wXrKhxsQ3Oa55eru7cWuVw4","title":"Reel 01"},{"group":"Masvida","id":"15W0umyo19nRYuz4dtj5N5ptcrwRv5rUu","title":"Dormir = no músculo"},{"group":"Masvida","id":"1JUJILXwZgluzpbEARCo6X0Za7FmI4VAR","title":"Reel 02"},{"group":"Masvida","id":"15fLKJSEFCNpeocBwF3rDBRmY1Mv70IeQ","title":"Reel 03"},{"group":"Masvida","id":"16J0jvaRv-rDJDPy_MJSKsXSz8xr0zQFT","title":"Prepodcast · versión 01"},{"group":"Masvida","id":"1dKfHT8114nGzQT3B6nuKP-WW6ZPiGpku","title":"Prepodcast · versión 02"},{"group":"Masvida","id":"1naPgF1J2grLHGCM4gq5FvG0BG9G6Vzpm","title":"Prepodcast"},{"group":"Autovidal","id":"19K5ikRKVWydGBHW9zAAiIoPwQppCdP7Q","title":"Reel 01"},{"group":"Autovidal","id":"1k5OmMsx-zIeXoa-E126QZbSW-V53YJVQ","title":"Reel 02"},{"group":"Autovidal","id":"19YFp847WAlymHwd-jvMFtt5jQh_VteIO","title":"Reel 03"},{"group":"Autovidal","id":"18hj8dVPBhRY-vVo2J8QrWkU0fdEa4AZ0","title":"Reel 04"},{"group":"Autovidal","id":"1X5x3BBEF4ZPBt4Hwza2gsUbQehZIsonM","title":"Reel 05"},{"group":"Autovidal","id":"1cNa8BG89cQtpyXVJ3qEXmp73cXXrbzqr","title":"Reel 06"},{"group":"Autovidal","id":"1pCypEdu6WNmJTO0vXURKoqMw1_67XAoE","title":"Reel 07"},{"group":"Autovidal","id":"1SC0hX-Og1bObID3xh1-_4MxWWN9w_1_v","title":"Reel 08"},{"group":"Autovidal","id":"10uTR-2TUOKAdjgll_5lUZ71KvLCWMLgL","title":"Reel 09"},{"group":"Autovidal","id":"11Jn8PyGckg3iM2OuFoUUfarKLwBVZj4E","title":"Reel 10"},{"group":"Autovidal","id":"1SY8sOqJcbTFLyt-4kHjTo-Pcn29vE5XX","title":"Reel 11"},{"group":"Autovidal","id":"1vvVydFS9nbeWhtEZThuySw-otFV1jHh6","title":"Reel 12"},{"group":"Autovidal","id":"1bL-VQziigwEWQzDM-HPU9D-h_wc7CSkY","title":"Reel 13"},{"group":"Autovidal","id":"1A-MljhhPaT-vc5yobxdl-d9N3dHOdY_2","title":"Reel 14"},{"group":"Autovidal","id":"1_bwoiJRNrmz-ynETCegaFKDH4qSMC0t0","title":"Reel 15"}];
+  const grid=document.getElementById("reels-grid"),filters=[...document.querySelectorAll(".reel-filter")],dialog=document.getElementById("reel-dialog"),stage=document.getElementById("reel-stage"),title=document.getElementById("reel-dialog-title"),label=document.getElementById("reel-dialog-label");
+  let activeFilter="Todos",visible=reels,current=0;
+  const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  function render(){visible=activeFilter==="Todos"?reels:reels.filter(r=>r.group===activeFilter);document.getElementById("reel-count").textContent=visible.length;
+    grid.innerHTML=visible.map((r,i)=>'<button class="reel-card" type="button" style="--i:'+i+'" data-index="'+i+'" aria-label="Reproducir '+esc(r.title)+' · '+esc(r.group)+'"><img src="https://drive.google.com/thumbnail?id='+r.id+'&sz=w720" loading="lazy" decoding="async" alt="" onerror="this.style.display=\'none\'"><span class="reel-card__play" aria-hidden="true">▶</span><span class="reel-card__index">'+String(i+1).padStart(2,"0")+'</span><span class="reel-card__meta"><span class="reel-card__group">'+esc(r.group)+'</span><span class="reel-card__title">'+esc(r.title)+'</span></span></button>').join("");
+    grid.querySelectorAll(".reel-card").forEach(card=>card.addEventListener("click",()=>openReel(Number(card.dataset.index))));
+  }
+  function showReel(){const r=visible[current];if(!r)return;title.textContent=r.title;label.textContent=r.group+" · "+String(current+1).padStart(2,"0")+" / "+String(visible.length).padStart(2,"0");stage.innerHTML='<iframe src="https://drive.google.com/file/d/'+r.id+'/preview?autoplay=0" title="'+esc(r.title)+'" allow="fullscreen" allowfullscreen loading="eager"></iframe>'}
+  function openReel(i){current=i;showReel();if(!dialog.open)dialog.showModal()}
+  function closeReel(){if(dialog.open)dialog.close();stage.innerHTML=""}
+  function step(d){current=(current+d+visible.length)%visible.length;showReel()}
+  filters.forEach(b=>b.addEventListener("click",()=>{activeFilter=b.dataset.filter;filters.forEach(x=>x.setAttribute("aria-pressed",String(x===b)));render()}));
+  document.getElementById("reel-close").addEventListener("click",closeReel);document.getElementById("reel-prev").addEventListener("click",()=>step(-1));document.getElementById("reel-next").addEventListener("click",()=>step(1));
+  dialog.addEventListener("click",e=>{if(e.target===dialog)closeReel()});dialog.addEventListener("close",()=>{stage.innerHTML=""});
+  document.addEventListener("keydown",e=>{if(dialog.open&&e.key==="ArrowRight")step(1);if(dialog.open&&e.key==="ArrowLeft")step(-1)});
+  render();
+})();
+</script>
 </body></html>
